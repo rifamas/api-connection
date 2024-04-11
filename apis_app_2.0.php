@@ -591,6 +591,8 @@ function custom_prepare_product_for_api($response, $producto, $request) {
             ),);
     }
 
+    $response->data['price'] = $product->get_price();
+
     /*$product_visibility = isset($response->data['catalog_visibility']) ? $response->data['catalog_visibility'] : '';
     if ($product_visibility === 'hidden') {
         continue;
